@@ -53,9 +53,9 @@ function build_linux
 
     cd linux
 
-    rm iotedgedev-$VERSION-py2.py3-none-any.whl --force
+    rm iotedgedevtest-$VERSION-py2.py3-none-any.whl --force
     
-    cp ../../../dist/iotedgedev-$VERSION-py2.py3-none-any.whl iotedgedev-$VERSION-py2.py3-none-any.whl
+    cp ../../../dist/iotedgedevtest-$VERSION-py2.py3-none-any.whl iotedgedevtest-$VERSION-py2.py3-none-any.whl
 
     docker build \
         -f Dockerfile.base \
@@ -69,7 +69,7 @@ function build_linux
         --build-arg IOTEDGEDEV_VERSION=$VERSION \
         .
 
-    rm iotedgedev-$VERSION-py2.py3-none-any.whl --force
+    rm iotedgedevtest-$VERSION-py2.py3-none-any.whl --force
 
     cd ..
 }
@@ -82,9 +82,9 @@ function build_windows
 
     cd windows
 
-    rm iotedgedev-$VERSION-py2.py3-none-any.whl --force
+    rm iotedgedevtest-$VERSION-py2.py3-none-any.whl --force
     
-    cp ../../../dist/iotedgedev-$VERSION-py2.py3-none-any.whl iotedgedev-$VERSION-py2.py3-none-any.whl
+    cp ../../../dist/iotedgedevtest-$VERSION-py2.py3-none-any.whl iotedgedevtest-$VERSION-py2.py3-none-any.whl
 
     docker build \
         -f Dockerfile.base \
@@ -100,7 +100,7 @@ function build_windows
         -t microsoft/iotedgedev:latest-windows \
         .
 
-    rm iotedgedev-$VERSION-py2.py3-none-any.whl --force
+    rm iotedgedevtest-$VERSION-py2.py3-none-any.whl --force
 
     cd ..
 }

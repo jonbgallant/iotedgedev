@@ -93,7 +93,7 @@ function run_upload_pypi
 {
     echo -e "\n===== Uploading to PyPi"
     PYPI=$([ "$MODE" = "prod" ] && echo "pypi" || echo "pypitest")
-    twine upload -r ${PYPI} --config-file .pypirc dist/iotedgedev-$(get_version)-py2.py3-none-any.whl
+    twine upload -r ${PYPI} --config-file .pypirc dist/iotedgedevtest-$(get_version)-py2.py3-none-any.whl
 }
 
 function run_build_docker
