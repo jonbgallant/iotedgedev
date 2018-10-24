@@ -122,7 +122,7 @@ def test_module_add():
     cli = __import__("iotedgedev.cli", fromlist=['main'])
     runner = CliRunner()
 
-    add_module_and_verify(cli.main, runner, "c")
+    #add_module_and_verify(cli.main, runner, "c")
     add_module_and_verify(cli.main, runner, "csharp")
     add_module_and_verify(cli.main, runner, "java")
     add_module_and_verify(cli.main, runner, "nodejs")
